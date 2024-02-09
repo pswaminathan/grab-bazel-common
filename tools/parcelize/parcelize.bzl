@@ -1,5 +1,5 @@
 load("@grab_bazel_common//rules:defs.bzl", "kotlin_library")
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_compiler_plugin")
+load("@rules_kotlin//kotlin:kotlin.bzl", "kt_compiler_plugin")
 
 def parcelize_rules():
     """Create Kotlin parcelize rules

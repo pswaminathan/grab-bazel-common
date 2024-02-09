@@ -15,7 +15,7 @@ load("@bazel_common_dagger//:workspace_defs.bzl", "DAGGER_ARTIFACTS", "DAGGER_RE
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 # Kotlin
-load("@io_bazel_rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories", "kotlinc_version")
+load("@rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories", "kotlinc_version")
 
 #Detekt
 load("@rules_detekt//detekt:dependencies.bzl", "rules_detekt_dependencies")

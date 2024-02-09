@@ -1,5 +1,5 @@
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
-load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
+load("@rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
+load("@rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
 load(":databinding_stubs.bzl", "databinding_stubs")
 load("@grab_bazel_common//rules/android/lint:defs.bzl", "LINT_ENABLED")
 

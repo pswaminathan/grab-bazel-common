@@ -1,4 +1,4 @@
-load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_test")
+load("@rules_kotlin//kotlin:jvm.bzl", "kt_jvm_test")
 
 _DEFAULT_SRC_SETS = ["src/test/java", "src/test/kotlin"]
 

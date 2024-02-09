@@ -1,10 +1,10 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:jvm.bzl",
+    "@rules_kotlin//kotlin:jvm.bzl",
     _kt_jvm_library = "kt_jvm_library",
 )
 load("@grab_bazel_common//rules/android/lint:defs.bzl", "LINT_ENABLED")
 
-_ANDROID_SDK_JAR = "@io_bazel_rules_kotlin//third_party:android_sdk"
+_ANDROID_SDK_JAR = "@rules_kotlin//third_party:android_sdk"
 
 def _kt_android_artifact(
         name,
