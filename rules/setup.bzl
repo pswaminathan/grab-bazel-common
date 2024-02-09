@@ -11,7 +11,7 @@ load(
 load("@grab_bazel_common//tools/buildifier:defs.bzl", "BUILDIFIER_DEFAULT_VERSION")
 
 # Kotlin
-load("@io_bazel_rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories", "kotlinc_version", "ksp_version")
+load("@rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories", "kotlinc_version", "ksp_version")
 
 #Detekt
 load("@rules_detekt//detekt:dependencies.bzl", "rules_detekt_dependencies")

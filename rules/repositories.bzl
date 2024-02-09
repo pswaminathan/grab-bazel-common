@@ -52,7 +52,7 @@ def _kotlin():
     RULES_KOTLIN_SHA = "3b772976fec7bdcda1d84b9d39b176589424c047eb2175bed09aac630e50af43"
 
     http_archive(
-        name = "io_bazel_rules_kotlin",
+        name = "rules_kotlin",
         sha256 = RULES_KOTLIN_SHA,
         urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/v%s/rules_kotlin-v%s.tar.gz" % (RULES_KOTLIN_VERSION, RULES_KOTLIN_VERSION)],
     )
