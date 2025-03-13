@@ -39,26 +39,11 @@ def _android(patched_android_tools):
     if patched_android_tools:
         android_tools()
 
-def _kotlin():
-    kotlin_repositories(
-        compiler_release = kotlinc_version(
-            release = "1.9.25",
-            sha256 = "6ab72d6144e71cbbc380b770c2ad380972548c63ab6ed4c79f11c88f2967332e",
-        ),
-        ksp_compiler_release = ksp_version(
-            release = "1.9.25-1.0.20",
-            sha256 = "3a2d24623409ac5904c87a7e130f5b39ce9fd67ca8b44e4fe5b784a6ec102b81",
-        ),
-    )
-    native.register_toolchains("//:kotlin_toolchain")
-
 def bazel_common_setup(
         patched_android_tools = True,
         buildifier_version = BUILDIFIER_DEFAULT_VERSION,
         pinned_maven_install = True,
         additional_coursier_options = ["--parallel", "12"]):
-    #rules_proto_dependencies()
-    #rules_proto_toolchains()
 
     rules_java_toolchains()
     rules_jvm_external_deps()
@@ -115,7 +100,6 @@ def bazel_common_setup(
     )
 
     _android(patched_android_tools)
-    _kotlin()
 
     rules_detekt_dependencies()
 
