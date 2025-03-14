@@ -5,7 +5,6 @@ kotlin_library(
     name = "worker_lib",
     srcs = glob([
         "src/main/kotlin/**/*.kt",
-        "src/main/kotlin/**/*.java",
     ]),
     visibility = [
         "//visibility:public",
