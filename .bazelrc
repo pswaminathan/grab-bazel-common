@@ -27,10 +27,10 @@ common --experimental_skymeld_analysis_overlap_percentage=100
 
 # JAVA - START
 common --experimental_strict_java_deps=off # Turn off strict java deps
-common --java_runtime_version=remotejdk_17 # Use inbuilt Java 17 for hermeticity
-common --tool_java_runtime_version=remotejdk_17
-common --tool_java_language_version=17
-common --java_language_version=17
+common --java_runtime_version=remotejdk_21 # Use inbuilt Java 21 for hermeticity
+common --tool_java_runtime_version=remotejdk_21
+common --tool_java_language_version=21
+common --java_language_version=21
 ## See https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html#legacy_language_codes
 common --jvmopt="-Djava.locale.providers=COMPAT,SPI" # Use Java 8 default locale provider
 common --jvmopt="--add-exports=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED"

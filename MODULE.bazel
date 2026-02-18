@@ -22,10 +22,10 @@ remote_android_extensions = use_extension(
 use_repo(remote_android_extensions, "android_tools")
 
 
-DAGGER_TAG = "2.46.1"
+DAGGER_TAG = "2.56.2"
 http_archive(
     name = "bazel_common_dagger",
-    sha256 = "bbd75275faa3186ebaa08e6779dc5410741a940146d43ef532306eb2682c13f7",
+    sha256 = "d8c360bcbb91719462f86bd2b43309b4ebc9c29ee7f1053a10217df391ea28cb",
     strip_prefix = "dagger-dagger-%s" % DAGGER_TAG,
     url = "https://github.com/google/dagger/archive/dagger-%s.zip" % DAGGER_TAG,
 )
