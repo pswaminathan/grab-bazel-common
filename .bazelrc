@@ -1,6 +1,3 @@
-# BzlMod
-common --enable_bzlmod=false
-
 # Cache setup
 common --disk_cache=bazel-cache
 common --remote_cache_compression=true
