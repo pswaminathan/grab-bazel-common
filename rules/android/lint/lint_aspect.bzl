@@ -1,3 +1,4 @@
+load("@rules_java//java/common:java_common.bzl", "java_common")
 load("@grab_bazel_common//rules/android:utils.bzl", "utils")
 load(
     "@grab_bazel_common//rules/android/lint:providers.bzl",

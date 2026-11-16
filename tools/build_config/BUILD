@@ -1,3 +1,4 @@
+load("@rules_java//java:defs.bzl", "java_binary")
 load("@grab_bazel_common//rules:defs.bzl", "kotlin_test")
 load(":build_config.bzl", "build_config")
 

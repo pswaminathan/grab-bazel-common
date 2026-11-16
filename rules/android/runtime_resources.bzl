@@ -1,3 +1,5 @@
+load("@rules_java//java/common:java_common.bzl", "java_common")
+load("@rules_java//java/common:java_info.bzl", "JavaInfo")
 """
 A rule to collect all dependencies' Android resource jars that is made available
 only on compile time and get them loaded during runtime

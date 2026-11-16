@@ -1,3 +1,4 @@
+load("@rules_java//java/common:java_info.bzl", "JavaInfo")
 load("@grab_bazel_common//rules/android/lint:collect_aar_aspect.bzl", "collect_aar_aspect")
 load("@grab_bazel_common//rules/android/lint:providers.bzl", "AarInfo", "AndroidLintSourcesInfo")
 

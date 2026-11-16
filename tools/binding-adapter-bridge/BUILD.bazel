@@ -1,3 +1,4 @@
+load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 load("@grab_bazel_common//rules:defs.bzl", "kotlin_library", "kotlin_test")
 
 kotlin_library(

@@ -1,3 +1,4 @@
+load("@rules_java//java:defs.bzl", "java_import")
 #alias(
 #    name = "worker_protocol_java_proto",
 #    actual = "@bazel_tools//src/main/protobuf:worker_protocol_java_proto",
