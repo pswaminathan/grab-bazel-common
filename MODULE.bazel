@@ -22,11 +22,15 @@ remote_android_extensions = use_extension(
 use_repo(remote_android_extensions, "android_tools")
 
 
-DAGGER_TAG = "2.56.2"
+DAGGER_TAG = "2.60.1"
 http_archive(
     name = "bazel_common_dagger",
-    sha256 = "d8c360bcbb91719462f86bd2b43309b4ebc9c29ee7f1053a10217df391ea28cb",
+    sha256 = "7ecce51ca45c551182df10fe4ea48fcdaabacaa282832a4244c04934e87fbc47",
     strip_prefix = "dagger-dagger-%s" % DAGGER_TAG,
+    patch_cmds = [
+        "sed -i.bak -e 's/native\\.java_library/java_library/; s/native\\.java_plugin/java_plugin/; s/native\\.android_library/android_library/' workspace_defs.bzl",
+        "printf 'load(\"@rules_java//java:defs.bzl\", \"java_library\", \"java_plugin\")\\nload(\"@rules_android//android:rules.bzl\", \"android_library\")\\n' | cat - workspace_defs.bzl > workspace_defs.bzl.new && mv workspace_defs.bzl.new workspace_defs.bzl",
+    ],
     url = "https://github.com/google/dagger/archive/dagger-%s.zip" % DAGGER_TAG,
 )
 
@@ -40,6 +44,8 @@ DAGGER_ARTIFACTS = [
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     name = "bazel_common_maven",
+    aar_import_bzl_label = "@rules_android//android:rules.bzl",
+    use_starlark_android_rules = True,
     artifacts = DAGGER_ARTIFACTS + [
         "androidx.databinding:databinding-adapters:7.1.2",
         "androidx.databinding:databinding-common:7.1.2",
