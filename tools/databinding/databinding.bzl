@@ -12,6 +12,8 @@ _DATABINDING_DEPS = [
     "@maven//:androidx_databinding_databinding_runtime",
     "@maven//:androidx_annotation_annotation",
     "@maven//:androidx_databinding_viewbinding",
+    "@maven//:org_jetbrains_annotations",
+    "@maven//:org_jetbrains_kotlin_kotlin_stdlib",
 ]
 
 _zipper = "@bazel_tools//tools/zip:zipper"
